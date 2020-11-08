@@ -15,9 +15,6 @@ import OrderForm from '../../features/OrderForm/OrderForm';
 import styles from './Trip.scss';
 import {Grid, Row, Col} from 'react-flexbox-grid';
 
-import {formatPrice} from '../../../utils/formatPrice';
-import {calculateTotal} from '../../../utils/calculateTotal';
-
 const Trip = ({error, name, image, cost, days, description, country, intro}) => {
   if(error) return <NotFound />;
   else return (
