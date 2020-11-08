@@ -45,7 +45,6 @@ export default function reducer(statePart = [], action = {}) {
         ...statePart,
         tags: statePart.tags.filter(tag=> tag!==action.payload),
       };
-    // TODO - handle other action types
     default:
       return statePart;
   }

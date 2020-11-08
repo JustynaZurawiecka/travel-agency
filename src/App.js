@@ -7,7 +7,6 @@ import MainLayout from './components/layout/MainLayout/MainLayout';
 
 import Home from './components/views/Home/Home';
 import Trips from './components/views/Trips/TripsContainer';
-// TODO - import other views
 import Countries from './components/views/Countries/CountriesContainer';
 import Regions from './components/views/Regions/RegionsContainer';
 
