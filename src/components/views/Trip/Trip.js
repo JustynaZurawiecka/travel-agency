@@ -10,9 +10,13 @@ import DetailsBox from '../../common/DetailsBox/DetailsBox';
 import DetailsImage from '../../common/DetailsImage/DetailsImage';
 import List from '../../common/List/List';
 import ListItem from '../../common/ListItem/ListItem';
+import OrderForm from '../../features/OrderForm/OrderForm';
 
 import styles from './Trip.scss';
 import {Grid, Row, Col} from 'react-flexbox-grid';
+
+import {formatPrice} from '../../../utils/formatPrice';
+import {calculateTotal} from '../../../utils/calculateTotal';
 
 const Trip = ({error, name, image, cost, days, description, country, intro}) => {
   if(error) return <NotFound />;
@@ -66,6 +70,18 @@ const Trip = ({error, name, image, cost, days, description, country, intro}) => 
           </Row>
         </Grid>
       </DetailsBox>
+      {/* TO DISCUSS !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */}
+      <PageTitle text='Trip options' />
+      <OrderForm>
+        <Grid>
+          <Row>
+            <Col xs={12}>
+              {/* <PageTitle text='Trip options' /> */}
+              <OrderForm tripCost={cost} />
+            </Col>
+          </Row>
+        </Grid>
+      </OrderForm>
     </Section>
   );
 };
