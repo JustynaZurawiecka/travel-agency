@@ -13,8 +13,8 @@ const OrderOptionNumber = ({limits, currentValue, setOptionValue,price}) => (
       onChange={event => setOptionValue(event.currentTarget.value)}
       value={currentValue}
     >
-      {formatPrice(price)}
     </input>
+    {formatPrice(price)}
   </div>
 );
 
